@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EFABCE"
+    android:layout_margin="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:padding="12dp"
+        android:textSize="16sp"
+        tools:text="note"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image"/>
+
+        <ImageView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/image"
+            android:padding="16dp"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            app:layout_constraintTop_toTopOf="@id/text"
+            app:layout_constraintBottom_toBottomOf="@id/text"
+           app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/imageedit"
+        android:padding="16dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintTop_toTopOf="@id/text"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintRight_toLeftOf="@id/image"/>
+
+    <EditText
+        android:id="@+id/editnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new note"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <ImageView
+        android:id="@+id/buttonedit"
+        android:src="@drawable/ic_baseline_check_24"
+        app:layout_constraintTop_toTopOf="@id/editnote"
+        app:layout_constraintBottom_toBottomOf="@id/editnote"
+        app:layout_constraintEnd_toEndOf="@id/editnote"
+        app:layout_constraintLeft_toRightOf="@id/editnote"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="4dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
